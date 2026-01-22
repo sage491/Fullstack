@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <section>
+        <h2 style="text-align:center;">Register</h2>
+        <div class="reg-container">
+            <form id="regForm">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" required placeholder="Enter username">
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required placeholder="At least 8 characters">
+
+                <label for="confirm">Confirm Password</label>
+                <input id="confirm" name="confirm" type="password" required placeholder="Repeat password">
+
+                <div style="margin-top:8px; text-align:left;">
+                    <input type="checkbox" id="showPwd"><label for="showPwd"> Show password</label>
+                </div>
+
+                <button type="submit">Register</button>
+                <div id="regMsg" role="status" style="margin-top:8px;color:green"></div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

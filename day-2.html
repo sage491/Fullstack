@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Headings</title>
+        <style>
+            :root{
+                --max:900px; --accent:#2563eb; --muted:#6b7280
+            }
+            body{font-family:Segoe UI, Roboto, Arial; background:#f3f4f6; margin:0; padding:24px; display:flex; justify-content:center}
+            .wrap{max-width:var(--max); width:100%; background:#fff; padding:28px; border-radius:10px; box-shadow:0 6px 24px rgba(15,23,42,0.06)}
+            h1,h2{color:var(--accent); margin:.25rem 0}
+            p{color:#111827}
+            img,iframe,video{max-width:100%; border-radius:6px}
+            table{width:100%; border-collapse:collapse; margin:16px 0}
+            th,td{border:1px solid #4f5a71; padding:10px}
+            label{display:block; margin-top:10px; color:var(--muted)}
+            input[type=text],select,textarea{width:100%; max-width:480px; padding:8px; border:1px solid #d1d5db; border-radius:6px}
+            .row{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+            .container {text-align: center;}
+
+        </style>
+    </head>
+    <body>
+        <main class="wrap">
+            <h1>This is the h1</h1>
+            <hr />
+
+            <h2>This is the h2</h2>
+            <hr />
+
+            <h3>This is the h3</h3>
+            <h4>This is the h4</h4>
+            <h5>This is the h5</h5>
+
+            <p>
+                Lorem ipsum dolor <strong>sit amet consectetur adipisicing elit</strong>. Ipsum
+                suscipit ratione qui tempora deleniti aliquam deserunt provident, vero unde fuga
+                magnam quas. <u>Quis consectetur itaque?</u> <em>Sit unde velit error</em> harum
+                corporis nam expedita.
+            </p>
+
+            <p>H<sub>2</sub>O</p>
+            <p>3<sup>2</sup> = 9</p>
+
+            <ol type="A">
+                <li>Ordered item 1</li>
+                <li>Ordered item 2</li>
+            </ol>
+
+            <ul style="list-style:circle">
+                <li>Unordered item 1</li>
+                <li>Unordered item 2</li>
+            </ul>
+
+            <h2>Things to bring tomorrow</h2>
+            <ol>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Banana</li>
+            </ol>
+
+            <dl>
+                <dt><strong>Heading</strong></dt>
+                <dd>Short description</dd>
+            </dl>
+
+            <h2>Image</h2>
+            <img src="https://via.placeholder.com/800x300.png?text=Image+Placeholder" alt="placeholder image" />
+
+            <h2>Embedded video</h2>
+            <iframe src="https://www.youtube.com/embed/qaeHKoq_CLM" title="youtube" height="360" width="640" allowfullscreen></iframe>
+
+            <table>
+                <thead>
+                    <tr><th></th><th colspan="2">Average</th><th>Red Eyes</th></tr>
+                    <tr><th></th><th>Height</th><th>Weight</th><th></th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Male</td><td>1.9</td><td>0.003</td><td>40K</td></tr>
+                    <tr><td>Female</td><td>1.7</td><td>0.002</td><td>43K</td></tr>
+                </tbody>
+            </table>
+
+        <div class="container">
+
+            <h2>Registration form</h2>
+            <form action="" novalidate>
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Enter your name" />
+
+                <label for="password">Password</label>
+                <input id="password" type="text" placeholder="Enter your password" />
+
+                <div class="row">
+                    <div style="color:var(--muted)">Gender:</div>
+                    <label><input type="radio" name="gender" value="Male" /> Male</label>
+                    <label><input type="radio" name="gender" value="Female" /> Female</label>
+                </div>
+
+                <label for="city">Select City</label>
+                <select id="city" name="city">
+                    <option value="">Select</option>
+                    <option>Delhi</option>
+                    <option>Mumbai</option>
+                    <option>Chennai</option>
+                    <option>Kolkata</option>
+                </select>
+
+                <div class="row">
+                    <div style="color:var(--muted)">Hobbies:</div>
+                    <label><input type="checkbox" name="hobby" value="Cricket" /> Cricket</label>
+                    <label><input type="checkbox" name="hobby" value="Football" /> Football</label>
+                </div>
+
+                <label for="review">Review</label>
+                <textarea id="review" rows="6" placeholder="Write your review..."></textarea>
+
+                <label for="file">Select file</label>
+                <input id="file" type="file" accept=".png,.pdf,.docx" />
+
+                <div style="margin-top:12px">
+                    <input type="reset" value="Clear" />
+                </div>
+            
+                </div>
+
+            </form>
+        </main>
+    </body>
+</html>

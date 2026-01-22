@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML basics</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.4; }
+        .merge-cells, .merged-example { border-collapse: collapse; margin: 18px auto; text-align: center; }
+        .merge-cells th, .merge-cells td, .merged-example th, .merged-example td { border: 1px solid #333; padding: 8px; }
+        
+        code { background:#f4f4f4; padding:2px 4px; border-radius:4px; }
+        /* Registration form styles */
+        .reg-container { max-width:360px; margin:18px auto; border:1px solid #ccc; padding:16px; border-radius:8px; background:#fff; }
+        .reg-container label { display:block; text-align:left; margin-top:8px; font-weight:600; }
+        .reg-container input[type="text"], .reg-container input[type="password"] { width:100%; padding:8px; margin-top:4px; box-sizing:border-box; }
+        .reg-container button { margin-top:12px; padding:8px 12px; cursor:pointer; border:none; background:#0078d4; color:#fff; border-radius:4px; }
+        .reg-container button:disabled { opacity:0.6; }
+    </style>
+
+</head>
+<body>
+   
+    <main>
+        <h1>textalign A table with merged cells</h1>
+
+        <table class="merge-cells">
+            <thead>
+                <tr>
+                    <th>Dynasty</th>
+                    <th>Period (approx.)</th>
+                    <th>Most Famous Emperor</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Qin</td>
+                    <td>221–206 BC</td>
+                    <td>Qin Shi Huang</td>
+                    <td>Unified China; first emperor</td>
+                </tr>
+                <tr>
+                    <td>Han</td>
+                    <td>206 BC–220 AD</td>
+                    <td>Emperor Wu (Han Wudi)</td>
+                    <td>Expanded territory; cultural Flourishing</td>
+                </tr>
+                <tr>
+                    <td>Sui</td>
+                    <td>581–618</td>
+                    <td>Emperor Wen of Sui</td>
+                    <td>Reunified China after fragmentation</td>
+                </tr>
+                <tr>
+                    <td>Tang</td>
+                    <td>618–907</td>
+                    <td>Emperor Taizong (Li Shimin)</td>
+                    <td>Golden age of culture and trade</td>
+                </tr>
+                <tr>
+                     <td>Song</td>
+                    <td>960–1279</td>
+                    <td>Emperor Taizu (Zhao Kuangyin)</td>
+                    <td>Technological and economic advances</td>
+                </tr>
+                <tr>
+                    <td>Yuan</td>
+                    <td>1271–1368</td>
+                    <td>Kublai Khan</td>
+                    <td>Mongol-led dynasty; expanded contacts with West</td>
+                </tr>
+                <tr>
+                    <td>Ming</td>
+                    <td>1368–1644</td>
+                    <td>Yongle Emperor (Zhu Di)</td>
+                    <td>Commissioned the Forbidden City; maritime voyages</td>
+                </tr>
+                <tr>
+                    <td>Qing</td>
+                    <td>1644–1912</td>
+                    <td>Kangxi Emperor</td>
+                    <td>One of the longest-reigning and influential emperors</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <section>
+        <h2 style="text-align:center;">Merged Cells Example</h2>
+        <p style="text-align:center;">Table with centered cells, borders, a "Gender Average" column split into Height and Weight (using <code>colspan</code>), and a "Red Eyes" column demonstrating <code>rowspan</code>.</p>
+
+        <table class="merged-example">
+            <caption style="caption-side:bottom; text-align:center;">Average height/weight by gender and red-eyes prevalence</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">Gender</th>
+                    <th colspan="2">Gender Average</th>
+                    <th rowspan="2">Red Eyes</th>
+                </tr>
+                <tr>
+                    <th>Height (cm)</th>
+                    <th>Weight (kg)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Male</td>
+                    <td>171</td>
+                    <td>68</td>
+                    <td rowspan="2">Rare (~2%)</td>
+                </tr>
+                <tr>
+                    <td>Female</td>
+                    <td>159</td>
+                    <td>57</td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2 style="text-align:center;">Register</h2>
+        <div class="reg-container">
+            <form id="regForm">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" required placeholder="Enter username">
+                
+                <label>Gender</label>
+                <div style="text-align:left; margin-top:4px;">
+                    <input type="radio" id="g_male" name="gender" value="Male" required>
+                    <label for="g_male"> Male</label>
+                    &nbsp;&nbsp;
+                    <input type="radio" id="g_female" name="gender" value="Female">
+                    <label for="g_female"> Female</label>
+                    &nbsp;&nbsp;
+                    <input type="radio" id="g_nb" name="gender" value="Non-binary">
+                    <label for="g_nb"> Non-binary</label>
+                    &nbsp;&nbsp;
+                    <input type="radio" id="g_none" name="gender" value="Prefer not to say">
+                    <label for="g_none"> Prefer not to say</label>
+                </div>
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required placeholder="At least 8 characters">
+
+                <label for="confirm">Confirm Password</label>
+                <input id="confirm" name="confirm" type="password" required placeholder="Repeat password">
+
+                <div style="margin-top:8px; text-align:left;">
+                    <input type="checkbox" id="showPwd"><label for="showPwd"> Show password</label>
+                </div>
+
+                <button type="submit">Register</button>
+                <div id="regMsg" role="status" style="margin-top:8px;color:green"></div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('showPwd').addEventListener('change', function(e){
+            var t = document.getElementById('password');
+            var c = document.getElementById('confirm');
+            var type = e.target.checked ? 'text' : 'password';
+            t.type = type; c.type = type;
+        });
+
+        document.getElementById('regForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            var u = document.getElementById('username').value.trim();
+            var p = document.getElementById('password').value;
+            var c = document.getElementById('confirm').value;
+            var genderEl = document.querySelector('input[name="gender"]:checked');
+            var msg = document.getElementById('regMsg');
+            msg.style.color = 'red';
+            if(!u){ msg.textContent = 'Username is required.'; return; }
+            if(!genderEl){ msg.textContent = 'Please select a gender option.'; return; }
+            if(p.length < 8){ msg.textContent = 'Password must be at least 8 characters.'; return; }
+            if(p !== c){ msg.textContent = 'Passwords do not match.'; return; }
+            var g = genderEl.value;
+            msg.style.color = 'green';
+            msg.textContent = 'Registered (demo). Username: ' + u + ' • Gender: ' + g;
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
