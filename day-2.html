@@ -1,132 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Headings</title>
-        <style>
-            :root{
-                --max:900px; --accent:#2563eb; --muted:#6b7280
-            }
-            body{font-family:Segoe UI, Roboto, Arial; background:#f3f4f6; margin:0; padding:24px; display:flex; justify-content:center}
-            .wrap{max-width:var(--max); width:100%; background:#fff; padding:28px; border-radius:10px; box-shadow:0 6px 24px rgba(15,23,42,0.06)}
-            h1,h2{color:var(--accent); margin:.25rem 0}
-            p{color:#111827}
-            img,iframe,video{max-width:100%; border-radius:6px}
-            table{width:100%; border-collapse:collapse; margin:16px 0}
-            th,td{border:1px solid #4f5a71; padding:10px}
-            label{display:block; margin-top:10px; color:var(--muted)}
-            input[type=text],select,textarea{width:100%; max-width:480px; padding:8px; border:1px solid #d1d5db; border-radius:6px}
-            .row{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
-            .container {text-align: center;}
+<head>
+<meta charset="UTF-8">
+<title>Harshit Kumar - Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        </style>
-    </head>
-    <body>
-        <main class="wrap">
-            <h1>This is the h1</h1>
-            <hr />
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #eef1f5;
+    margin: 0;
+    padding: 20px;
+}
 
-            <h2>This is the h2</h2>
-            <hr />
+.resume {
+    max-width: 950px;
+    margin: auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
 
-            <h3>This is the h3</h3>
-            <h4>This is the h4</h4>
-            <h5>This is the h5</h5>
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-            <p>
-                Lorem ipsum dolor <strong>sit amet consectetur adipisicing elit</strong>. Ipsum
-                suscipit ratione qui tempora deleniti aliquam deserunt provident, vero unde fuga
-                magnam quas. <u>Quis consectetur itaque?</u> <em>Sit unde velit error</em> harum
-                corporis nam expedita.
-            </p>
+.info { max-width: 65%; }
 
-            <p>H<sub>2</sub>O</p>
-            <p>3<sup>2</sup> = 9</p>
+.photo img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 3px solid #222;
+    object-fit: cover;
+}
 
-            <ol type="A">
-                <li>Ordered item 1</li>
-                <li>Ordered item 2</li>
-            </ol>
+.links-bar {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
 
-            <ul style="list-style:circle">
-                <li>Unordered item 1</li>
-                <li>Unordered item 2</li>
-            </ul>
+.links-bar a {
+    flex: 1;                
+    text-align: center;
+    padding: 12px 0;
+    background: #f0f2f5;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #1a73e8;
+}
 
-            <h2>Things to bring tomorrow</h2>
-            <ol>
-                <li>Apple</li>
-                <li>Orange</li>
-                <li>Banana</li>
-            </ol>
 
-            <dl>
-                <dt><strong>Heading</strong></dt>
-                <dd>Short description</dd>
-            </dl>
+.section { margin-top: 25px; }
 
-            <h2>Image</h2>
-            <img src="https://via.placeholder.com/800x300.png?text=Image+Placeholder" alt="placeholder image" />
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
 
-            <h2>Embedded video</h2>
-            <iframe src="https://www.youtube.com/embed/qaeHKoq_CLM" title="youtube" height="360" width="640" allowfullscreen></iframe>
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-            <table>
-                <thead>
-                    <tr><th></th><th colspan="2">Average</th><th>Red Eyes</th></tr>
-                    <tr><th></th><th>Height</th><th>Weight</th><th></th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Male</td><td>1.9</td><td>0.003</td><td>40K</td></tr>
-                    <tr><td>Female</td><td>1.7</td><td>0.002</td><td>43K</td></tr>
-                </tbody>
-            </table>
+th, td {
+    border: 1px solid #bbb;
+    padding: 10px;
+    text-align: center;
+}
 
-        <div class="container">
+th {
+    background: #2c2c2c;
+    color: #fff;
+}
 
-            <h2>Registration form</h2>
-            <form action="" novalidate>
-                <label for="name">Name</label>
-                <input id="name" type="text" placeholder="Enter your name" />
+@media (max-width: 650px) {
+    .header { flex-direction: column; text-align: center; }
+    .links-bar { flex-direction: column; }
+}
+</style>
+</head>
 
-                <label for="password">Password</label>
-                <input id="password" type="text" placeholder="Enter your password" />
+<body>
 
-                <div class="row">
-                    <div style="color:var(--muted)">Gender:</div>
-                    <label><input type="radio" name="gender" value="Male" /> Male</label>
-                    <label><input type="radio" name="gender" value="Female" /> Female</label>
-                </div>
+<div class="resume">
 
-                <label for="city">Select City</label>
-                <select id="city" name="city">
-                    <option value="">Select</option>
-                    <option>Delhi</option>
-                    <option>Mumbai</option>
-                    <option>Chennai</option>
-                    <option>Kolkata</option>
-                </select>
+<div class="header">
+    <div class="info">
+        <h1>Harshit Kumar</h1>
+        <p>Computer Science Engineering Student</p>
+        <p>📞 +91 9341641276</p>
+        <p>📍 Delhi, India</p>
+    </div>
+    <div class="photo">
+        <img src="harshit.jpg" alt="Harshit Kumar - Profile Photo">
+    </div>
+</div>
 
-                <div class="row">
-                    <div style="color:var(--muted)">Hobbies:</div>
-                    <label><input type="checkbox" name="hobby" value="Cricket" /> Cricket</label>
-                    <label><input type="checkbox" name="hobby" value="Football" /> Football</label>
-                </div>
+<div class="links-bar">
+    <a href="mailto:harshitkumaroxford@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/harshit-kumar-92b22b1b3" target="_blank">LinkedIn</a>
+    <a href="https://github.com/sage491" target="_blank">GitHub</a>
+</div>
 
-                <label for="review">Review</label>
-                <textarea id="review" rows="6" placeholder="Write your review..."></textarea>
+<div class="section">
+<h2>Technical Skills</h2>
+<ul>
+    <li>Languages: Python, C, C++, JavaScript, SQL</li>
+    <li>Frameworks: React, Next.js, Express.js</li>
+    <li>Concepts: System Design, AI/ML, Data Structures</li>
+    <li>Tools: Git, VS Code, Figma</li>
+</ul>
+</div>
 
-                <label for="file">Select file</label>
-                <input id="file" type="file" accept=".png,.pdf,.docx" />
+<div class="section">
+<h2>Projects</h2>
+<ul>
+    <li><b>Towsoth Edu – AI Powered LMS</b><br>
+    Designed multi-tenant LMS, recommendation engine, analytics, scalable frontend.</li>
+    <li><b>Vision AI Chatbot</b><br>
+    Tested LLaVA & LiLa, evaluated multimodal reasoning and performance.</li>
+    <li><b>Web Applications</b><br>
+    Built responsive product forms and resume systems.</li>
+</ul>
+</div>
 
-                <div style="margin-top:12px">
-                    <input type="reset" value="Clear" />
-                </div>
-            
-                </div>
+<div class="section">
+<h2>Educational Qualifications</h2>
+<table>
+<tr><th>Degree</th><th>Institution</th><th>Year</th><th>Score</th></tr>
+<tr><td>B.Tech CSE</td><td>Chandigarh University</td><td>2024–2028</td><td>8.5 CGPA</td></tr>
+<tr><td>BBA (DBE)</td><td>IIM Bangalore</td><td>2024–2027</td><td>Hybrid</td></tr>
+<tr><td>Class XII</td><td>CBSE</td><td>2023</td><td>70%</td></tr>
+<tr><td>Class X</td><td>CBSE</td><td>2021</td><td>90.4%</td></tr>
+</table>
+</div>
 
-            </form>
-        </main>
-    </body>
+<div class="section">
+<h2>Achievements</h2>
+<ul>
+    <li>1st Place – Ideathon</li>
+    <li>3rd Place – Project Expo</li>
+    <li>EY Techathon Round 2</li>
+    <li>Top AMCAT Rank</li>
+    <li>Class Representative</li>
+</ul>
+</div>
+
+</div>
+
+</body>
 </html>

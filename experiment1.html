@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Job Portal — Internships & Entry-Level Jobs</title>
+
+	<link rel="stylesheet" href="experiment2.css" />
+</head>
+<body>
+	<div class="container">
+
+		<header>
+			<div class="logo">
+				<div class="mark">JP</div>
+				<div>
+					<div style="font-weight:700">JobPortal</div>
+					<div style="font-size:12px;color:var(--muted)">Internships & early-career roles</div>
+				</div>
+			</div>
+
+			<nav>
+				<a href="#">Post a Job</a>
+				<a href="#">Employers</a>
+				<a href="#">Sign in</a>
+			</nav>
+		</header>
+
+		<section class="hero">
+			<div class="hero-head">
+				<h1>Find internships, fresher jobs & remote opportunities</h1>
+				<div style="color:var(--muted);font-size:13px">12,000+ active openings</div>
+			</div>
+
+			<form class="search" onsubmit="return false">
+				<input type="text" placeholder="Job title, skill, or company">
+				<input type="text" placeholder="City or remote">
+				<select>
+					<option>Any type</option>
+					<option>Full-time</option>
+					<option>Part-time</option>
+					<option>Internship</option>
+					<option>Contract</option>
+				</select>
+				<button type="submit">Search</button>
+			</form>
+		</section>
+
+		<main>
+			<aside>
+				<div class="filter-group">
+					<h4>Category</h4>
+					<div class="chip">Engineering</div>
+					<div class="chip">Design</div>
+					<div class="chip">Marketing</div>
+					<div class="chip">Product</div>
+				</div>
+
+				<div class="filter-group">
+					<h4>Type</h4>
+					<div class="chip">Remote</div>
+					<div class="chip">On-site</div>
+					<div class="chip">Hybrid</div>
+				</div>
+
+				<div class="filter-group">
+					<h4>Experience</h4>
+					<div class="chip">Fresher</div>
+					<div class="chip">1–2 years</div>
+					<div class="chip">2+ years</div>
+				</div>
+			</aside>
+
+			<section>
+				<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+					<div style="color:var(--muted)">Showing 1–6 of 12,321 jobs</div>
+					<div style="color:var(--muted)">
+						Sort:
+						<select style="background:transparent;border:none;color:#e6eef6">
+							<option>Relevance</option>
+							<option>Newest</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="jobs">
+
+					<article class="job-card">
+						<div class="job-left">
+							<div class="company">TD</div>
+							<div>
+								<h3 class="job-title">Frontend Developer Intern</h3>
+								<div class="job-meta">TechDive • Remote • Internship</div>
+							</div>
+						</div>
+						<div class="job-right">
+							<div class="tags">
+								<div class="badge">HTML</div>
+								<div class="badge">CSS</div>
+								<div class="badge">React</div>
+							</div>
+							<div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end">
+								<div style="color:var(--muted);font-size:13px">$200/mo</div>
+								<button class="apply-btn">Apply</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="job-card">
+						<div class="job-left">
+							<div class="company">BD</div>
+							<div>
+								<h3 class="job-title">Business Development Executive</h3>
+								<div class="job-meta">BrightEdge • Bangalore • Full-time</div>
+							</div>
+						</div>
+						<div class="job-right">
+							<div class="tags">
+								<div class="badge">Sales</div>
+								<div class="badge">Lead Gen</div>
+							</div>
+							<div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end">
+								<div style="color:var(--muted);font-size:13px">$600/mo</div>
+								<button class="apply-btn">Apply</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="job-card">
+						<div class="job-left">
+							<div class="company">UX</div>
+							<div>
+								<h3 class="job-title">Product Designer (Fresher)</h3>
+								<div class="job-meta">NeoDesigns • Remote • Internship</div>
+							</div>
+						</div>
+						<div class="job-right">
+							<div class="tags">
+								<div class="badge">Figma</div>
+								<div class="badge">UX</div>
+							</div>
+							<div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end">
+								<div style="color:var(--muted);font-size:13px">$250/mo</div>
+								<button class="apply-btn">Apply</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="job-card">
+						<div class="job-left">
+							<div class="company">ML</div>
+							<div>
+								<h3 class="job-title">Machine Learning Intern</h3>
+								<div class="job-meta">DataCore • Pune • Internship</div>
+							</div>
+						</div>
+						<div class="job-right">
+							<div class="tags">
+								<div class="badge">Python</div>
+								<div class="badge">Pandas</div>
+							</div>
+							<div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end">
+								<div style="color:var(--muted);font-size:13px">$350/mo</div>
+								<button class="apply-btn">Apply</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="job-card">
+						<div class="job-left">
+							<div class="company">MK</div>
+							<div>
+								<h3 class="job-title">Content Marketing Intern</h3>
+								<div class="job-meta">MarketKit • Remote • Internship</div>
+							</div>
+						</div>
+						<div class="job-right">
+							<div class="tags">
+								<div class="badge">SEO</div>
+								<div class="badge">Content</div>
+							</div>
+							<div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end">
+								<div style="color:var(--muted);font-size:13px">$180/mo</div>
+								<button class="apply-btn">Apply</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="job-card">
+						<div class="job-left">
+							<div class="company">HR</div>
+							<div>
+								<h3 class="job-title">HR Intern</h3>
+								<div class="job-meta">PeopleFirst • Mumbai • Internship</div>
+							</div>
+						</div>
+						<div class="job-right">
+							<div class="tags">
+								<div class="badge">Recruiting</div>
+							</div>
+							<div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end">
+								<div style="color:var(--muted);font-size:13px">$150/mo</div>
+								<button class="apply-btn">Apply</button>
+							</div>
+						</div>
+					</article>
+
+				</div>
+
+				<div style="display:flex;justify-content:center;margin-top:18px;gap:8px">
+					<button class="apply-btn">Prev</button>
+					<button class="apply-btn">1</button>
+					<button class="apply-btn">2</button>
+					<button class="apply-btn">Next</button>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			Built with HTML & CSS — open the file directly in your browser
+		</footer>
+
+	</div>
+</body>
+</html>
