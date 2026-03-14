@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#f0f3f7;--card:#ffffff;--accent:#4f46e5;--muted:#6b7280}
+        *{box-sizing:border-box}
+        body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e6eefc 0%,#f7f9fc 100%);font-family:Inter, system-ui, Arial, sans-serif;color:#0f172a}
+        .container{width:100%;max-width:720px;padding:28px;border-radius:12px;background:var(--card);box-shadow:0 6px 20px rgba(16,24,40,0.08)}
+        h1{margin:0 0 16px;font-size:1.5rem}
+        form{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+        select,#amount{flex:1;padding:10px 12px;border:1px solid #e6e9ee;border-radius:8px;background:#fff;font-size:0.95rem}
+        button{padding:10px 16px;border-radius:8px;border:none;background:var(--accent);color:#fff;font-weight:600;cursor:pointer}
+        button:hover{opacity:0.95}
+        .total{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+        .total strong{font-size:1.25rem}
+        #expense-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+        #expense-list li{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:8px;background:#f8fafc;border:1px solid #eef2f7}
+        #expense-list li .meta{color:var(--muted);font-size:0.9rem}
+        @media (max-width:560px){form{flex-direction:column;align-items:stretch}button{width:100%}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <form id="expense-form" class="expense-form">
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Travel">Travel</option>
+            </select>
+
+            <input type="number" id="amount" placeholder="Amount" required>
+
+            <button type="submit">Add</button>
+        </form>
+
+        <div class="total">
+            <h2 style="margin:0;font-size:1rem;color:var(--muted)">Total:</h2>
+            <strong>₹ <span id="total">0</span></strong>
+        </div>
+
+        <ul id="expense-list"></ul>
+    </div>
+    <script src="expense_tracker.js"></script>
+
+</body>
+</html>
